@@ -16,6 +16,7 @@
             src: ./git-prompt.sh
             dest: /Users/loyuta/.git-prompt.sh
             mode: "0644"
+            force: false
           when: ansible_distribution == 'MacOSX'
     - name: Copy zshrc file 2
       ansible.builtin.debug:
