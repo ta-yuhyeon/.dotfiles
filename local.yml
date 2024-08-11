@@ -1,6 +1,6 @@
 ---
 - name: Ansible pull setup
-  hosts: all
+  hosts: localhost
   tasks:
     - name: Copy file
       ansible.builtin.template:
