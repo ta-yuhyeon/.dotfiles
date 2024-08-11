@@ -4,6 +4,6 @@
   tasks:
     - name: Copy file
       ansible.builtin.template:
-        src: ./zshrc.j2
-        dest: /Users/{{ ansible_user_id }}/.zshrc
+        src: zshrc.j2
+        dest: /Users/loyuta/.zshrc
         mode: '0644'
