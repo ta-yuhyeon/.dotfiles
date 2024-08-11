@@ -10,7 +10,7 @@
             dest: /Users/loyuta/.zshrc
             remote_src: true
             mode: "0644"
-          when: ansible_distribution_id == 'MacOSX'
+          when: ansible_distribution == 'MacOSX'
     - name: Copy zshrc file 2
       ansible.builtin.debug:
         msg: "hello there"
