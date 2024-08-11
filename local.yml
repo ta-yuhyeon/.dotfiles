@@ -2,8 +2,13 @@
 - name: Ansible pull setup
   hosts: localhost
   tasks:
-    - name: Copy file
-      ansible.builtin.template:
-        src: zshrc.j2
+    - name: Copy a "sudoers" file on the remote machine for editing
+      ansible.builtin.copy:
+        src: ./zshrc
         dest: /Users/loyuta/.zshrc
-        mode: '0644'
+        remote_src: true
+    # - name: Copy file
+    #   ansible.builtin.template:
+    #     src: zshrc.j2
+    #     dest: /Users/loyuta/.zshrc
+    #     mode: '0644'
