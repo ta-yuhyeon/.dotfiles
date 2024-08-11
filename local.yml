@@ -1,6 +1,6 @@
 ---
-name: Ansible pull setup
-hosts: localhost
-tasks:
-  - name: Test
-    ansible.builtin.ping:
+- name: Ansible pull setup
+  hosts: localhost
+  tasks:
+    - name: Test
+      ansible.builtin.ping:
