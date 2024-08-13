@@ -4,12 +4,22 @@
   tasks:
     - name: Init my personal setup
       block:
+
         - name: Copy zshrc file
           ansible.builtin.copy:
-            src: ./zshrc
-            dest: "/Users/{{ ansible_user_id }}/.zshrc"
+            src: ./files/zshrc
+            dest: "~/.zshrc"
             mode: "0644"
-          when: ansible_distribution == 'MacOSX'
-    - name: Copy zshrc file 2
-      ansible.builtin.debug:
-        msg: "hello there"
+            force: true
+
+        - name: Copy vimrc file
+          ansible.builtin.copy:
+            src: ./files/vimrc
+            dest: "~/.vimrc"
+            mode: "0644"
+            force: true
+
+        - name: Render gitconfig file
+          ansible.builtin.template:
+            src: gitconfig.j2
+            dest: ~/.gitconfig
