@@ -4,6 +4,14 @@
   tasks:
     - name: Init my personal setup
       block:
+        - name: Install dependencies
+          ansible.builtin.package:
+            name:
+              - zsh
+              - vim
+              - git
+            state: latest
+          when: ansible_distribution != 'MacOSX'
 
         - name: Copy zshrc file
           ansible.builtin.copy:
