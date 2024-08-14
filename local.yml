@@ -10,7 +10,7 @@
               - zsh
               - vim
               - git
-            state: latest
+            state: present
           when: ansible_distribution != 'MacOSX'
 
         - name: Copy zshrc file
