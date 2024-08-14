@@ -12,6 +12,8 @@
               - git
             state: present
           when: ansible_distribution != 'MacOSX'
+          become: true
+          become_method: ansible.builtin.sudo
 
         - name: Copy zshrc file
           ansible.builtin.copy:
