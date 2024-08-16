@@ -5,7 +5,7 @@
     - name: Init my personal setup
       block:
         - name: Install dependencies
-          ansible.builtin.package:
+          ansible.builtin.apt:
             name:
               - zsh
               - vim
