@@ -258,5 +258,13 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-export PATH="$PATH:/opt/homebrew/bin"
-ssh-add
+if [ -d "/Users" ]; then
+    export PATH="$PATH:/opt/homebrew/bin"
+    echo "La cartella esiste."
+fi
+if ssh-add -l >/dev/null 2>&1; then
+  echo "Chiavi SSH sono già aggiunte all'agente."
+else
+  echo "Nessuna chiave SSH aggiunta. Aggiungendo una chiave..."
+  ssh-add 
+fi
