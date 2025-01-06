@@ -12,4 +12,4 @@ killall Dock
 
 osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/System/Library/Desktop Pictures/Solid Colors/Blue Violet.png"'
 
-scutil --set HostName $CHOSEN_HOSTNAME
+# scutil --set HostName $CHOSEN_HOSTNAME
