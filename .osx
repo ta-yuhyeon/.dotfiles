@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+defaults write com.apple.dock show-apps-in-dock -int 0
+
+defaults write com.apple.dock show-recents -int 0
+
+defaults write com.apple.dock 'autohide' -int 0
+
+defaults write com.apple.dock "tilesize" -int "48"
+
+killall Dock
+
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/System/Library/Desktop Pictures/Solid Colors/Blue Violet.png"'
+
+scutil --set HostName $CHOSEN_HOSTNAME
