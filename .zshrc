@@ -1,6 +1,8 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
 
+##### NOTE THAT THIS .ZSHRC IS ALMOST THE SAME AS THE ONE USED IN KALI LINUX
+
 setopt autocd              # change directory just by typing its name
 #setopt correct            # auto correct mistakes
 setopt interactivecomments # allow comments in interactive mode
@@ -47,6 +49,7 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # History configurations
+touch ~/.zsh_history
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=2000
