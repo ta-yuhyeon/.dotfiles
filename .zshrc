@@ -261,5 +261,5 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-export PATH="$PATH:/opt/homebrew/bin"
+export PATH="$PATH:/opt/homebrew/bin:/Users/$(whoami)/Library/Python/3.9/bin"
 ssh-add
